@@ -1,0 +1,32 @@
+/*
+Print the following pattern for the given N number of rows.
+Pattern for N = 4
+A
+BB
+CCC
+DDDD
+*/
+package Patterns;
+import java.util.Scanner;
+public class AlphaPattern {
+
+	public static void main(String[] args) {
+		System.out.println("Enter the row numbers n = ");
+		Scanner sc =  new Scanner(System.in);
+		int n = sc.nextInt();
+		
+		int row =1;
+		char newC = 'A';
+		while(row<=n) {
+			int	column = 1;
+			while(column<=row) {
+				System.out.print(newC);
+				column = column+1;
+			}
+			row= row+1;
+		    newC = (char)(newC+1);
+			System.out.println();
+		}
+
+	}
+}
